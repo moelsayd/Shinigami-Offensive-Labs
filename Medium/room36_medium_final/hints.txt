@@ -1,0 +1,5 @@
+[Hint 1] Look at /assets/app.js for hidden endpoints.
+[Hint 2] Try id=1' UNION SELECT info FROM secrets-- on /api/v1/data.
+[Hint 3] /backup/dev-config.old has SSH creds and next stage.
+[Hint 4] The final flag requires a special header: X-Role: admin. Or use the SSH priv esc.
+[Hint 5] Metasploit: set RHOST 127.0.0.1, RPORT 6088, TARGETURI /admin/exec?cmd=, and set Cookie.

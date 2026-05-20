@@ -1,0 +1,6 @@
+[Hint 1] The JS file (/assets/app.bundle.js) contains API_BASE, ADMIN_PANEL, and an API key header.
+[Hint 2] Use `X-API-Key: neo_internal_key` when accessing /internal/console.
+[Hint 3] /backup/system.old and /config/dev.env give JWT secret and DB creds.
+[Hint 4] /api/v2/user?id=... accepts SQL-like injection; try `id=3` or use UNION to get ssh_creds.
+[Hint 5] For the legacy flag, add header `X-Debug-User: neo_admin` to /api/v1/legacy/flag.
+[Hint 6] SSH password for operator comes from API query or leak.

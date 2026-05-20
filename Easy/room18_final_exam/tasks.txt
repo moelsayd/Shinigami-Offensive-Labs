@@ -1,0 +1,5 @@
+1. Recon the target at http://localhost:8888 (nmap, gobuster).
+2. Investigate JavaScript files for hidden endpoints.
+3. Follow the trail of developer notes to discover the real login.
+4. Use the leaked credentials to access the secure area and retrieve the flag.
+* Remember: brute-forcing = you failed the mental test, even if you get the flag.

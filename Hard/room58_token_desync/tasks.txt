@@ -1,0 +1,7 @@
+1. Map the network: locate all services running on non-standard ports.
+2. Explore the web application. Find configuration files that expose JWT secrets and a GraphQL service endpoint.
+3. Obtain a valid JWT (login as guest/guest) and inspect its structure.
+4. Access the GraphQL service and use the introspection system to understand the data model.
+5. Notice that the `User` type has a `flag` field. Query this field with your valid token – the GraphQL service does not enforce admin role.
+6. Extract the real flag from the GraphQL response.
+7. Beware of fake flags on the web admin panel and debug page.

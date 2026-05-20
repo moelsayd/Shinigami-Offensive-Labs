@@ -1,0 +1,4 @@
+1. Scan localhost for an open SSH port (2222).
+2. Connect to the service using netcat (nc) or telnet.
+3. Try common weak credentials (e.g., test:1234) to log in.
+4. If successful, capture the displayed flag.

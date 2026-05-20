@@ -1,0 +1,5 @@
+1. Recon the web server (port 7071). Basic scans may not reveal the hidden admin panel.
+2. Inspect the HTML source and linked JavaScript files.
+3. Locate the hardcoded admin path in a JS file.
+4. Visit the hidden admin panel and use weak credentials to log in.
+5. Retrieve the flag after successful authentication.

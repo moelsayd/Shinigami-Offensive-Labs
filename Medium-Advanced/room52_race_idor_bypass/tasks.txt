@@ -1,0 +1,9 @@
+1. Scan the target system to locate the hidden service (no ports given).
+2. Explore the login functionality. Note any unusual delays or response headers.
+3. Check /debug for internal hints about processing time.
+4. Understand the race condition: the server creates a session before verifying credentials.
+5. Craft a parallel request attack: while sending a login request with wrong credentials, immediately reuse the returned session cookie to access /dashboard.
+6. Once logged in (even as a pending user), explore the dashboard and profile.
+7. Exploit the IDOR vulnerability in /admin/profile?user_id= to read other users' data.
+8. Retrieve the real flag from a user other than yourself.
+9. Ignore the fake flag shown in the admin profile and debug page.

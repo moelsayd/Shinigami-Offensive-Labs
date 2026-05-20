@@ -1,0 +1,13 @@
+1. Map the enterprise mobile infrastructure. Many services are present.
+2. Obtain the enterprise APK from the main portal.
+3. Reverse engineer the APK (use `unzip -p` and `strings`) to extract JWT secret, internal API endpoints, and ADB credentials hint.
+4. Log into the web portal as guest/guest. Notice the ADB password hash.
+5. Crack the bcrypt hash offline to obtain the ADB password.
+6. Connect to the ADB service. You are in a restricted Android shell.
+7. Find and exploit the SUID misconfigured `find` binary to read `/data/system/flag_part1.txt`. Retrieve the first part of the flag.
+8. Analyze the JWT from the portal. Exploit the kid injection (kid=/dev/null) to forge an admin token.
+9. Use the admin token to access the Internal API's secret endpoint (`/api/secret`) to get the second part of the flag.
+10. Discover the Mobile API via host header manipulation (`m.eclipse.internal`) to find the Worker URL.
+11. Upload a file containing "admin_pipeline" to the Worker. Then forge an admin JWT for the Worker (different secret; find it via APK or try kid injection) and read the worker memory to find the third part of the flag.
+12. Combine all flag parts. The monitoring service contains only fake flags.
+13. Beware of multiple fake flags throughout the environment.

@@ -1,0 +1,6 @@
+1. Scan localhost for open ports. Find ADB (5556) and an unknown web service (9999).
+2. Connect to the ADB sim and pull the base APK (e.g., `adb pull /data/app/base.apk` or via `nc`).
+3. Analyze the APK using tools such as jadx, apktool, or simple `strings` and `unzip`.
+4. Discover hidden credentials and an internal endpoint from the APK strings.
+5. Access the internal web admin panel, authenticate, and obtain the flag.
+6. Beware of fake flags and misleading files.

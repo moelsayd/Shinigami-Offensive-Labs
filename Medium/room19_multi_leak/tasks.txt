@@ -1,0 +1,5 @@
+1. Perform web reconnaissance on the target (port 7070).
+2. Discover the robots.txt file and its disallowed path.
+3. Access the leaked backup directory and examine its contents.
+4. Read the old configuration file to find further clues.
+5. Follow the revealed trail to retrieve the final flag.

@@ -1,0 +1,4 @@
+[Hint 1] Look at /robots.txt and the loaded JavaScript files.
+[Hint 2] Inside /static/app.js, find window.__CONFIG__ and a developer comment.
+[Hint 3] The admin panel is at /super/secret/panel, credentials are admin:React2024!
+[Hint 4] Try search?id=1 UNION SELECT data FROM secrets-- for the flag.

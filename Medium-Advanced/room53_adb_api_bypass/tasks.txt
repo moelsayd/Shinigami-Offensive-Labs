@@ -1,0 +1,9 @@
+1. Scan the target range to find two hidden services.
+2. One service is an ADB simulator. Pull the base APK and analyze its strings (or use the APK tool).
+3. Extract the JWT secret and API endpoint from the APK.
+4. Access the API service. Intercept traffic using Burp Suite (or curl) to examine the JWT.
+5. Login as guest/guest, capture the JWT, and modify it using the stolen secret to elevate privileges (role=admin, or alg=none).
+6. With admin access, use the NoSQL-like injection in the user search endpoint to bypass filters and dump all users.
+7. Alternatively, use the IDOR vulnerability in /api/profile?user_id= to read other users' secrets.
+8. Retrieve the real flag from a user other than admin.
+9. Ignore the fake flag in the debug page and the admin profile.

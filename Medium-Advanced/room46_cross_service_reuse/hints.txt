@@ -1,0 +1,4 @@
+[Hint 1] View the source of the login page for a developer comment.
+[Hint 2] The dashboard contains notes about SSH and DB with "same as web" password.
+[Hint 3] Try ssh: `nc 127.0.0.1 7502` and login with admin / MyS3cr3tP@ss.
+[Hint 4] Or mysql: `nc 127.0.0.1 7503` and the same credentials.

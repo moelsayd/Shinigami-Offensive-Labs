@@ -1,0 +1,4 @@
+1. Enumerate the web server (port 8888) using gobuster or dirb.
+2. Find the file `dev-notes.txt` and read its contents.
+3. Use the discovered credentials to log in via `/login`.
+4. Retrieve the flag after successful authentication.

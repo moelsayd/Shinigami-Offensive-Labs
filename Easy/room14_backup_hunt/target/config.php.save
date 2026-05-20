@@ -1,0 +1,6 @@
+<?php
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "supersecret";
+// Internal flag for deployment: THM{ext3nsi0n_hunt3r}
+?>

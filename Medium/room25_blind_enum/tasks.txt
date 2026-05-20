@@ -1,0 +1,5 @@
+1. Discover the /user endpoint and note that it requires an 'id' parameter.
+2. Test with valid IDs (1,2) and observe the response (status 200, "User Found").
+3. Test with an invalid ID (e.g., 999) and see the 404 response.
+4. Induce an error by injecting a single quote (id=1') – notice the different status code (500) and error message.
+5. Use the information from the error to craft a SQL injection payload (e.g., id=1' OR '1'='1) and retrieve all users, including the hidden admin flag.

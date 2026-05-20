@@ -1,0 +1,9 @@
+1. Map the target thoroughly to find all services.
+2. Identify the web application. Log in and explore the file upload functionality.
+3. Notice the discrepancy between frontend validation (JavaScript) and backend acceptance (API schema mismatch).
+4. Upload a non-image file (e.g., Python script) by bypassing the frontend check directly.
+5. Exploit the race condition window: upload the script, then immediately access it to achieve remote code execution.
+6. Use the RCE to read the flag from /root/flag.txt.
+7. Alternatively, exploit the CSRF vulnerability in the "Share with Admin" feature to trick the admin into visiting a malicious URL, revealing a secret.
+8. As a third path, use the SSH service with credentials found in configuration or through RCE.
+9. Beware of fake flags in debug and admin responses.

@@ -1,0 +1,5 @@
+1. Locate the file upload feature on the web service (port 6068).
+2. Upload a Python script (.py file) – the server has no file type restriction.
+3. Visit the /files?user=anonymous page and note that file names are hidden behind random strings.
+4. Exploit the SQL injection in the user parameter to reveal all uploaded files, including admin’s backdoor.
+5. Execute the revealed admin .py file via the /uploads/ endpoint to retrieve the flag.

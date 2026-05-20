@@ -1,0 +1,4 @@
+[Hint 1] View the HTML source of the login page.
+[Hint 2] robots.txt reveals /backup/ and /fake-admin.
+[Hint 3] The backup file at /backup/config.bak shows the filter and a TODO about hex/decimal IPs.
+[Hint 4] Try replacing 127.0.0.1 with its decimal form: 2130706433.

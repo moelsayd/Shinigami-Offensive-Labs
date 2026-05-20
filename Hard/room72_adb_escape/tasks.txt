@@ -1,0 +1,9 @@
+1. Scan the target to discover all active services.
+2. Access the web portal. Log in and note the JWT token structure.
+3. Exploit the JWT kid injection vulnerability (kid=/dev/null) to forge an admin token and view the dashboard, where the ADB password hash is revealed.
+4. Crack the bcrypt hash offline using hashcat (mode 3200) or john to obtain the ADB password.
+5. Connect to the ADB service (port 11222) and authenticate with the cracked password.
+6. You are now in a restricted Android shell. Enumerate the system (ls, ps, getprop, mount).
+7. Discover a SUID misconfigured `find` binary. Use it to execute commands as root: `find /data/system -name flag.txt -exec cat {} \;`.
+8. Retrieve the real flag from /data/system/flag.txt.
+9. Examine the monitoring service logs for additional clues and fake flags.

@@ -1,0 +1,10 @@
+1. Scan localhost: find web (6088) and SSH (6089).
+2. Enumerate web: gobuster, JS analysis, robots.txt, hidden endpoints.
+3. Exploit SQLi on /api/v1/data to extract information.
+4. Access /internal/console and /backup/dev-config.old to gather credentials.
+5. Use leaked creds to login to web admin panel and test command execution.
+6. (Metasploit) Exploit the web command injection using `exploit/multi/http/exec` with captured cookie.
+7. Connect to SSH as `limited` with leaked password.
+8. (Metasploit) Use `auxiliary/scanner/ssh/ssh_login` and `exploit/multi/ssh/sshexec` to run commands.
+9. Perform privilege escalation on SSH via `sudo find` to read /root/flag.txt.
+10. Obtain the final flag: THM{medium_level_chain_complete}.

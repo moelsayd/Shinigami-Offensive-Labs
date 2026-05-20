@@ -1,0 +1,6 @@
+1. Recon the main web server on port 6082: check robots.txt, source code comments.
+2. Find the backup file and read it to understand the SSRF filter and internal target.
+3. Login using leaked credentials (admin / password123).
+4. Exploit the SSRF endpoint, bypass the filter (hint: use decimal IP representation).
+5. Access the internal admin panel and retrieve the real flag.
+6. (Cyber Deception) Ignore the fake flag at /fake-admin.

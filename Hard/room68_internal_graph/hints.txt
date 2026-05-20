@@ -1,0 +1,4 @@
+[Hint 1] The /fetch endpoint blocks 127.0.0.1, but the /redirect endpoint does not. Use /redirect?url=http://127.0.0.1:10820/ as the target of /fetch.
+[Hint 2] The JWT from the metadata service uses "kid":"metadata_key". The internal API trusts the kid to select the signing key. You can set kid=/dev/null and sign with an empty key.
+[Hint 3] After forging an admin JWT, request /api/admin/db_token to get a token for the database service.
+[Hint 4] Query the DB at /query?token=...&key=flag.

@@ -1,0 +1,4 @@
+1. Identify the web service on port 4040.
+2. Interact with the /view endpoint (e.g., /view?page=home).
+3. Test for Local File Inclusion by using path traversal payloads (e.g., ../secret/flag.txt).
+4. Retrieve the flag file from outside the templates directory.

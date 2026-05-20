@@ -1,0 +1,4 @@
+[Hint 1] Visit /robots.txt first. It contains a comment with the JWT secret.
+[Hint 2] Debug info at /debug/config confirms the server accepts 'none' algorithm.
+[Hint 3] Use jwt.io or a script: set alg=none, remove signature, change role to admin.
+[Hint 4] After getting admin access, try ?id=1 UNION SELECT data FROM secrets-- on /admin/lookup.

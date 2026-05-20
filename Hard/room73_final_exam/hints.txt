@@ -1,0 +1,5 @@
+[Hint 1] JWT secret can be found in /config. Use kid=/dev/null for admin bypass.
+[Hint 2] To access Mobile API, send request with Host: m.eclipsecorp.internal.
+[Hint 3] SSRF blocks localhost, but decimal 2130706433 works.
+[Hint 4] Worker secret is "worker_secret_456". You can find it in the Mobile API response or guess via kid injection.
+[Hint 5] Upload a file with curl -X POST -d "admin_pipeline" http://worker:11642/upload, then check /memory.

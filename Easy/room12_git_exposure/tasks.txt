@@ -1,0 +1,4 @@
+1. Use a directory brute-forcing tool (e.g., gobuster) against the web server.
+2. Find the exposed /.git/ directory.
+3. Browse into the .git folder and read the config file.
+4. Extract the hidden flag from the config comments.

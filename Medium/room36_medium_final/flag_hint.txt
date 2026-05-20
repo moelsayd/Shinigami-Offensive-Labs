@@ -1,0 +1,1 @@
+Hint: The final flag requires a special header: X-Role: admin

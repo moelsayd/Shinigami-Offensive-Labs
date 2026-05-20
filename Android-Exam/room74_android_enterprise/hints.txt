@@ -1,0 +1,5 @@
+[Hint 1] Run `strings` on the APK to find JWT_SECRET and ADB user/host.
+[Hint 2] The ADB password hash is bcrypt. Use hashcat mode 3200 or john --format=bcrypt.
+[Hint 3] JWT kid injection: set kid=/dev/null for an empty secret key, sign with empty string.
+[Hint 4] Worker JWT secret is "worker_secret_456", found in the APK strings.
+[Hint 5] Upload a file to Worker using `curl -X POST -d "admin_pipeline" http://127.0.0.1:12055/upload`.

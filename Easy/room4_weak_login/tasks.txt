@@ -1,0 +1,3 @@
+1. Start the lab and open the provided URL in your browser or use curl.
+2. Identify the login form and try common weak credentials.
+3. Use guessed credentials to access the restricted area and retrieve the flag.

@@ -1,0 +1,4 @@
+[Hint 1] The frontend script rejects non-images, but you can POST directly to /api/upload using curl or Burp.
+[Hint 2] The backend saves the file with its original extension. Upload a `.py` file and access it via `/files/<stored_name>`.
+[Hint 3] The "Share with Admin" feature makes the server fetch a URL you provide. Use this to access internal endpoints on behalf of admin.
+[Hint 4] SSH credentials may be found in a config file or extracted after RCE.

@@ -1,0 +1,7 @@
+1. Scan the target system to locate all active services. No ports are given to you.
+2. Explore the web server functionality. A download feature exists but is restricted.
+3. Exploit the Path Traversal vulnerability to read sensitive system files (e.g., /etc/passwd, /app/config.yml).
+4. From the configuration file, extract credentials and the location of an internal Admin API.
+5. Authenticate to the Admin API using the stolen credentials.
+6. The Admin API appears resistant to traditional SQLi, but a deeper inspection reveals it's a NoSQL-type database. Exploit the NoSQL Injection to extract the real application flag.
+7. Be cautious of fake files and directories designed to mislead you.

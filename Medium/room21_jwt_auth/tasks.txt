@@ -1,0 +1,5 @@
+1. Login to the service at /login using username=guest and password=guest.
+2. Capture the JWT token from the response.
+3. Decode the token (base64) and identify the "role" field.
+4. Change "role": "user" to "admin" and re-sign the token using the secret key "admin" (HS256).
+5. Send the modified token to /flag in the Authorization header to retrieve the flag.

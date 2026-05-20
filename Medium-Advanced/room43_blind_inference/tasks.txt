@@ -1,0 +1,8 @@
+1. Scan localhost thoroughly for an unusual open port (7201).
+2. Examine `robots.txt` – a typical trap and a hint towards `/debug/`.
+3. Visit `/debug/` but realize the flag there is fake.
+4. Observe that the main page (`/?id=...`) always returns the same HTML, but response time, cookies, and headers vary.
+5. Use a tool or write a script to measure response time: `id=1` is faster than `id=999` (found vs not found).
+6. Exploit the blind SQL injection: craft conditions like `id=1 AND 1=1` (true) vs `id=1 AND 1=2` (false) and notice the cookie difference.
+7. Perform a time-based boolean extraction of the flag character by character, or use the cookie `found=true` to infer data.
+8. Retrieve the real flag from the database.

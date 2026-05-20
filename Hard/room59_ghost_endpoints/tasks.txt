@@ -1,0 +1,8 @@
+1. Scan all ports on the target host to locate active services.
+2. Investigate the web application. Notice that /debug returns 403 until a special initialization step is performed.
+3. Use the DOM-based XSS hint to think about request manipulation. Send a request to /init with the required header.
+4. With the session cookie, access /debug and extract the API key for the internal service.
+5. Explore the internal cache service. Discover the cache poisoning vulnerability via the Host header.
+6. Poison the cache by sending a POST to /cache/poison with a Host header containing "evil". Then request /cache/data with the same Host to retrieve the real flag.
+7. Alternatively, use SSH credentials found through further enumeration (operator:gh0st_pass) and escalate privileges via sudo find.
+8. Beware of fake flags: the debug page shows a decoy, and the cache initially returns a fake flag.

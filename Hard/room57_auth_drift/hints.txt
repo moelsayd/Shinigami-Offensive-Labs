@@ -1,0 +1,4 @@
+[Hint 1] The backup config at /backup/config.bak contains JWT secret, OAuth server, and WebSocket URL.
+[Hint 2] The OAuth server (port 9202) accepts any redirect_uri. You can supply your own callback.
+[Hint 3] Use jwt.io to change the role to "admin" and sign with key "weak_auth_secret".
+[Hint 4] Connect to the WebSocket using websocat or Python and send the admin token, then type "flag".

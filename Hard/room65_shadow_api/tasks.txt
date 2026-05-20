@@ -1,0 +1,9 @@
+1. Scan the entire host to find all running services. Many APIs are not documented.
+2. Analyze the JavaScript file loaded by the main web application. It contains configuration details.
+3. Login to the web application and examine the JWT token. Forge an admin token using the leaked secret.
+4. Explore the internal API documentation at port 10020. Discover the /api/updateConfig endpoint.
+5. Exploit prototype pollution by setting the "role" to "admin" via the updateConfig endpoint.
+6. With the polluted config, access the /api/flag endpoint to retrieve the real flag.
+7. Alternatively, use the WebSocket service at port 10040 with the forged admin JWT and execute the "flag" command.
+8. As a third path, use SSH credentials discovered from the internal API and escalate privileges.
+9. Beware of fake flags on the web debug page and inside normal API responses.

@@ -1,0 +1,4 @@
+[Hint 1] The `/config` endpoint reveals the oracle service address and the required API key.
+[Hint 2] The encrypted flag is accessible via `/api/file?file=flag.txt.enc`, but not via `/download?file=flag.txt.enc`.
+[Hint 3] The oracle returns different HTTP status codes (403 for padding error, 200 for valid padding). Use this to brute-force bytes.
+[Hint 4] Use `padbuster` or a similar tool with the encrypted file (base64 encoded) against the oracle endpoint.

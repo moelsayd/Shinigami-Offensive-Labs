@@ -1,0 +1,7 @@
+1. Scan for the hidden web service. Enumerate directories and files (robots.txt, source code).
+2. From robots.txt, discover the debug path and a leaked secret.
+3. Login as guest/guest to obtain a JWT token.
+4. Analyze the token: notice the algorithm is HS256, but the debug config reveals 'none' is allowed.
+5. Craft a new token with alg=none and role=admin. Use the leaked secret to sign if necessary.
+6. Access /admin with the forged token. Then exploit the SQLi in the lookup to retrieve the real flag.
+7. Do NOT submit the fake flag found at /debug/flag.

@@ -1,0 +1,9 @@
+1. Map the entire target infrastructure. Find all open services.
+2. Discover the GraphQL endpoint. Use introspection to understand the data model.
+3. Log in and notice that your role is "user". Find a way to escalate to "admin" via an unprotected mutation.
+4. As admin, create a malicious task that will be processed by the internal worker service.
+5. The internal worker is not directly accessible (blocked by firewall). Use the SSRF proxy to reach it.
+6. Bypass the SSRF filter to deliver a pickled payload to the worker, achieving RCE.
+7. Retrieve the real flag from the worker service.
+8. Alternatively, use SSH with credentials extracted from the system.
+9. Beware of fake flags in GraphQL responses and debug pages.

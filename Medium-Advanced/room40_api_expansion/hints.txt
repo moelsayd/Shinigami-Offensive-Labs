@@ -1,0 +1,4 @@
+[Hint 1] In /static/api-map.js, there is a comment about /api/v2/internal/flag.
+[Hint 2] /debug/config leaks the JWT secret: "secret123".
+[Hint 3] Create a JWT with header {"alg":"HS256","typ":"JWT"}, payload {"role":"admin"} and sign with that secret.
+[Hint 4] Once admin, the SQLi payload: ?id=1 UNION SELECT data FROM secrets--

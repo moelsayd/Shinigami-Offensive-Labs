@@ -1,0 +1,11 @@
+1. Map the entire EclipseCorp infrastructure. Multiple services exist, some hidden behind a reverse proxy.
+2. Find leaked configuration files that reveal JWT secrets and internal API locations.
+3. Exploit the weak JWT kid parameter to escalate your role to admin.
+4. Discover the Mobile API through host header manipulation (m.eclipsecorp.internal) and extract internal service URLs.
+5. Use SSRF (bypassing filters) to reach the Internal API directly.
+6. In the Internal API, observe that role is inconsistent: /api/admin/info always shows admin, but other endpoints enforce real admin.
+7. Use your forged admin JWT to obtain the first part of the flag from /api/internal/secret.
+8. Locate the Worker service. Upload a file containing the keyword "admin_pipeline" to trigger special processing.
+9. The Worker uses a different JWT secret (which you must discover from another leak). Forge an admin token for the Worker (using kid=/dev/null or the correct secret) and access /memory to retrieve the second part of the flag.
+10. Combine both parts to get the full flag.
+11. Examine monitoring logs for hints and beware of fake flags.

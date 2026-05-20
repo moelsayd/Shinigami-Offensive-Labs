@@ -1,0 +1,9 @@
+1. Scan the corporate network to discover all running services behind the proxy.
+2. Access the main portal and log in. Observe your role in the dashboard.
+3. Visit Service A and discover the user upgrade functionality.
+4. Exploit the JWT kid injection vulnerability to forge an admin token and upgrade your role in Service A.
+5. After upgrading, visit Service B and attempt to access admin functionality.
+6. Notice that Service B does NOT enforce admin permissions. Exploit the IDOR to view other users' data.
+7. Retrieve the flag from the user "flagholder" (user_id=3).
+8. Examine the monitoring service logs for additional clues and fake flags.
+9. Observe rate limiting, proxy behavior, and logs that simulate a real enterprise environment.

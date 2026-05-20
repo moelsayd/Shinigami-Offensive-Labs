@@ -1,0 +1,4 @@
+[Hint 1] Check the backup directory. How do you handle .zip?
+[Hint 2] Inside the zip, examine .git files for hidden paths.
+[Hint 3] The debug endpoint returns credentials. Use them.
+[Hint 4] The search function in the admin panel has a classic SQL injection.

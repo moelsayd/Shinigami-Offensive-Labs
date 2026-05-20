@@ -1,0 +1,5 @@
+[Hint 1] /robots.txt and /debug both reveal the JWT secret.
+[Hint 2] Use jwt.io or a script to change alg=none and role=admin (no signature needed).
+[Hint 3] The admin endpoint /admin/metrics?id=... delays 2 seconds if the ID exists. Use this to extract data character by character.
+[Hint 4] Payload example: id=1 AND UNICODE(SUBSTR(token_data,1,1))>64 (if delay -> first char > 64).
+[Hint 5] After extracting developer:dev123, connect SSH and run: sudo find /root/flag.txt -exec cat {} \;

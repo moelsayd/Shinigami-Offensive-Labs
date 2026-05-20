@@ -1,0 +1,5 @@
+1. Explore the web service on port 6084: check the homepage, robots.txt, and source code.
+2. Use the /download endpoint to attempt path traversal (e.g., ../../etc/passwd).
+3. Read the leaked /etc/passwd and /etc/shadow to understand the system.
+4. Discover the real flag location from the backup decoy or debug information.
+5. Apply traversal to retrieve /root/flag.txt.

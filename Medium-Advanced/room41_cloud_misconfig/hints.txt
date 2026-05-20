@@ -1,0 +1,4 @@
+[Hint 1] /.env is publicly accessible. Read it carefully.
+[Hint 2] The storage server checks for X-Amz-Signature. It is HMAC-SHA256(secret, "GET\n{path}\n{timestamp}").
+[Hint 3] Use the AWS_SECRET_ACCESS_KEY as the HMAC secret. X-Amz-Date should be an ISO timestamp.
+[Hint 4] Example signature generation: echo -n "GET\n/object?key=flag.txt\n2026-05-10T12:00:00Z" | openssl dgst -sha256 -hmac "abcdef1234567890abcdef1234567890abcdef12"

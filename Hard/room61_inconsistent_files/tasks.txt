@@ -1,0 +1,8 @@
+1. Locate every service running on the target host.
+2. Identify the main web server. Look for inconsistencies in file access between different endpoints.
+3. Access the encrypted flag file through the unprotected API path.
+4. Obtain the API key for the internal decryption service from the web server configuration.
+5. Send a known ciphertext to the oracle to understand its response behavior regarding padding errors.
+6. Exploit the Padding Oracle vulnerability to decrypt the flag step by step (e.g., using a custom script or tool like `padbuster`).
+7. Alternatively, use leaked SSH credentials to log into the SSH server and escalate privileges via sudo.
+8. Never trust a page that shows a flag directly – several decoys are placed.

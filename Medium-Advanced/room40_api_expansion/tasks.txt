@@ -1,0 +1,9 @@
+1. Scan localhost for a hidden API server. Find the port (7083).
+2. Fuzz directories and files (gobuster) against the server.
+3. Inspect /robots.txt, /static/api-map.js for hints on hidden endpoints.
+4. Discover the debug area in /debug/config and extract the JWT secret.
+5. Obtain a valid JWT by logging in as guest/guest at /login.
+6. Forge an admin JWT using the leaked secret. Access /api/v1/admin and note the internal endpoint.
+7. Use the admin token to access /api/v2/internal/flag. The id parameter is vulnerable to SQL injection.
+8. Exploit SQLi (e.g., ?id=1 UNION SELECT data FROM secrets--) to retrieve the real flag.
+9. Ignore fake flags at /debug/flag and the default id=1 response.

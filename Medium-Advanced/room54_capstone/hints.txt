@@ -1,0 +1,4 @@
+[Hint 1] Use gobuster with DNS mode or manually add "staging.neocorp.local" to /etc/hosts after finding the comment in HTML.
+[Hint 2] The JWT secret is "dev_secret_key" (found in /backup/config.bak). Use alg=none or HS256.
+[Hint 3] API login with admin:NoSQL_P@ss gives a token. Query users with {"ssh_creds":{"$regex":".*"}}.
+[Hint 4] SSH user: operator, password from API query. Then run sudo find /root/flag.txt -exec cat {} \;

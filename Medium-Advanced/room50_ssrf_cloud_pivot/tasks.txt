@@ -1,0 +1,7 @@
+1. Map the target network: discover all available services running on non-standard ports.
+2. Investigate the main web application. Find the URL fetching functionality and understand its filtering.
+3. Bypass the localhost filter using alternative IP representations (decimal, hex, 127.1, etc.).
+4. Access the internal metadata service to retrieve credentials and note the hint about another internal API.
+5. Use the obtained credentials to authenticate to the internal admin API.
+6. Abuse the NoSQL injection vulnerability in the admin API to dump all documents and extract the real flag.
+7. Ignore all fake flags that appear in debug pages and metadata.

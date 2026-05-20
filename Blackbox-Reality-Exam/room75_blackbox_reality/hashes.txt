@@ -1,0 +1,2 @@
+admin:$2b$10$lnXfzwCja9U9nc5hUva6SOYBHlm69JgPPSHdUfcCf8Xg3ctBEI1CW
+legacy:$2b$10$gdx1s0Z207WBOQLQ/yzGeOMI4fBhMvlwZg0ZKAw2bd1QE0SbA0aii

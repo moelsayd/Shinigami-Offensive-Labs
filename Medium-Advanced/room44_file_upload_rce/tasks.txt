@@ -1,0 +1,7 @@
+1. Scan localhost thoroughly for an unusual port (7301).
+2. Explore the web app: find the upload feature and the file listing endpoint.
+3. Discover the /files?uploader=... parameter and exploit its SQL injection to reveal hidden file names.
+4. Bypass the weak MIME type check during file upload (hint: Content-Type header) and upload a Python script (.py) that reads /root/flag.txt.
+5. Retrieve the real stored name of your uploaded file via SQL injection.
+6. Access the uploaded file to trigger RCE and obtain the real flag.
+7. Ignore the fake admin portal at /admin-login/ (revealed by robots.txt) – it returns a decoy flag.

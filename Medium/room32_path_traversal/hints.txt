@@ -1,0 +1,4 @@
+[Hint 1] The homepage HTML contains a comment about /debug.
+[Hint 2] robots.txt reveals /backup/ and allows /debug. Backup file contains decoy creds but also a hint.
+[Hint 3] Try /download?file=../../fake_root/etc/passwd to read system files (or ../../etc/passwd in the simulated environment).
+[Hint 4] The real flag is in /root/flag.txt. Use traversal to reach it: ../../fake_root/root/flag.txt.

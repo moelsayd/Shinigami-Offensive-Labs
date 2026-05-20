@@ -1,0 +1,8 @@
+1. Scan thoroughly for unusual open ports (7501, 7502, 7503).
+2. Enumerate the web service: discover a login page with an HTML comment revealing default credentials.
+3. Log in and examine the dashboard: it leaks information about SSH and DB servers, but shows a fake flag.
+4. Abuse the comment section: it is vulnerable to Stored XSS.
+5. If you wish, perform XSS to capture admin's session (simulate), or reuse the leaked credentials directly.
+6. Connect to the SSH server at port 7502 using the same password and retrieve the flag.
+7. Alternatively, connect to the MySQL server at port 7503 using the same password and retrieve the flag.
+8. Submit the real flag found on the SSH or DB service.

@@ -1,0 +1,5 @@
+1. Enumerate directories on the target (port 6063) using gobuster/dirb.
+2. Discover the hidden /backup/ path and inspect its files.
+3. Enumerate the /api/user endpoint and test different 'id' parameters.
+4. Using clues from the backup file or API responses, locate the hidden /api/admin endpoint.
+5. Exploit the admin endpoint with the correct parameter to retrieve the flag.

@@ -1,0 +1,4 @@
+[Hint 1] The SSRF filter blocks "127.0.0.1" but not its decimal form "2130706433" or hex "0x7f000001".
+[Hint 2] The metadata endpoint is at port 8402 (discoverable through the SSRF).
+[Hint 3] Admin API login: POST /api/login with {"username":"admin","password":"Sup3rS3cr3tMetadataP@ss"}.
+[Hint 4] After login, use the token to POST /api/users with a NoSQL filter like {"username":{"$ne":""}} to dump all users, or {"flag":{"$regex":".*"}} to find the flag.

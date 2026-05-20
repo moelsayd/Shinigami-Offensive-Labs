@@ -1,0 +1,9 @@
+1. Map the full attack surface of the target host.
+2. Explore the web application's user functionalities: login, dashboard, refund, and purchase.
+3. Investigate how the refund mechanism works. Is there a way to exploit its arithmetic?
+4. Exploit the business logic flaw to increase your credit balance beyond the normal limit.
+5. Purchase the premium item with your inflated balance to obtain a crucial secret.
+6. Use the obtained secret to access a hidden internal service.
+7. Abuse the insecure XML parser in the internal service to read sensitive system files.
+8. Alternatively, use leaked credentials to access the SSH server and escalate privileges via sudo.
+9. Be aware of multiple decoy flags placed in various locations.

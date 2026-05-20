@@ -1,0 +1,5 @@
+1. Scan localhost to find open port 5555.
+2. Identify the service as Android Debug Bridge (ADB) using its banner.
+3. Connect to the service via netcat or ADB client.
+4. Execute the 'shell' command to obtain a pseudo-shell.
+5. Inside the shell, read the flag from /sdcard/flag.txt.

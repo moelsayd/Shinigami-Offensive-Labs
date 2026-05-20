@@ -1,0 +1,4 @@
+[Hint 1] Try refunding a negative amount. What happens to your balance?
+[Hint 2] With enough credits (1000), you can buy the "admin_key" item.
+[Hint 3] The internal service expects an XML body and requires a specific header for authentication.
+[Hint 4] Use the classic XXE payload to read /root/flag.txt: <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///root/flag.txt">]><foo>&xxe;</foo>

@@ -1,0 +1,3 @@
+[Hint 1] Use `nc 127.0.0.1 7777` to connect.
+[Hint 2] The service asks for a command and returns its output. Try `ls` first.
+[Hint 3] Read the flag with `cat flag.txt`.

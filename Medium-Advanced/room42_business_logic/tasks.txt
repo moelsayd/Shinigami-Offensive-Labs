@@ -1,0 +1,8 @@
+1. Map the target: discover the main web service (port 7101) and an internal dashboard (port 7102).
+2. Log in with guest/guest. Go to the upgrade page.
+3. Experiment with the upgrade API: notice that you can choose any plan if the coupon is valid.
+4. Abuse the business logic: use coupon WELCOME50 and change plan=enterprise to receive an API key.
+5. Use the API key to access the internal dashboard at port 7102.
+6. Notice the id parameter in the dashboard. Try different user IDs (e.g., id=7) – this is an IDOR vulnerability.
+7. Retrieve the real flag from the user with ID 7.
+8. Beware of the fake flags: /robots.txt points to /admin-panel/ with a decoy, and upgrading to premium shows another fake flag.

@@ -1,0 +1,5 @@
+1. Recon the login page (port 6085): check robots.txt and dev-notes.txt.
+2. Understand that the login uses a multi‑threaded server with an artificial delay.
+3. Exploit the race condition by sending two concurrent login requests: one with valid credentials, one with invalid but same username.
+4. If successful, access the dashboard as admin and retrieve the real flag.
+5. Ignore the fake flag placed at /fake-admin.

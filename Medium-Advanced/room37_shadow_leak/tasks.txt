@@ -1,0 +1,6 @@
+1. Your only starting point is the target's IP. Run nmap and gobuster.
+2. Discover the hidden graph: every file is a node leading to the next.
+3. Extract the archive, dredge the .git history, and find the debug endpoint.
+4. Use the leaked debug data to pivot to the admin panel.
+5. Exploit the final node (SQLi) to retrieve the shadow flag.
+6. Ignore /backup/fake_flag.txt – it’s a deception.

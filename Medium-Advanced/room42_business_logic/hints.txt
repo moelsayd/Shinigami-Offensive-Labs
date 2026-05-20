@@ -1,0 +1,4 @@
+[Hint 1] Read /robots.txt and try the disallowed path.
+[Hint 2] Use coupon "WELCOME50" and set plan=enterprise in your POST request.
+[Hint 3] The internal dashboard at port 7102 gives different data based on ?id=.
+[Hint 4] Try id=7 to find the flag associated with a different user.

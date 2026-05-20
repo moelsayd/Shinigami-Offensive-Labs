@@ -1,0 +1,10 @@
+# Application Configuration
+database:
+  host: localhost
+  port: 8502
+  username: admin
+  password: NoSQL_P@ssw0rd!
+  auth_db: admin
+
+# Internal Notes
+# The admin API uses JSON-based queries (NoSQL style)

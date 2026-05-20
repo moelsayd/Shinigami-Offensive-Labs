@@ -1,0 +1,4 @@
+[Hint 1] The JWT issued by the main service has a `kid` header. The internal service trusts this kid to select the signing key.
+[Hint 2] Use `kid=/dev/null` and an empty secret to forge a valid admin token.
+[Hint 3] The proxy allows you to send raw HTTP to the internal service. Construct a request: `GET /internal/admin/flag HTTP/1.1\r\nHost: localhost\r\nAuthorization: Bearer <token>\r\n\r\n`
+[Hint 4] Sign your token with HMAC-SHA256 using an empty key on jwt.io or with a script.

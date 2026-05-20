@@ -1,0 +1,8 @@
+1. Scan localhost for open ports: find web (7084) and internal storage (7085).
+2. Enumerate the web server: discover /.env and robots.txt.
+3. Extract cloud credentials and storage endpoint from .env.
+4. Access the storage service at the internal endpoint. Authentication is required.
+5. Understand the authentication: it expects a signature header based on HMAC-SHA256.
+6. Construct the signature using the leaked secret key, date, and request method.
+7. List objects in the bucket and retrieve the flag object.
+8. Ignore the fake flag present in the .env file and the fake-flag.txt object.

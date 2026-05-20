@@ -1,0 +1,13 @@
+1. No path is given. Start by mapping the surface.
+2. Behavior changes based on context (User-Agent, headers). Discover the internal bot agent.
+3. Find the JWT secret leak and exploit kid injection to become admin.
+4. Locate the first flag piece in the admin dashboard.
+5. Use SSRF via the proxy fetcher to reach internal services (Auth, User, Billing, Legacy).
+6. In Auth service, use admin JWT to retrieve the second piece.
+7. In User service, exploit IDOR to find a user with a note containing the third piece.
+8. In Billing service, exploit the refund logic to audit transactions, and use a specific header to get the final piece.
+9. Discover the Legacy service and bypass its authentication via a malformed header.
+10. The Worker service can be accessed only after discovering its token (hardcoded). Upload "admin_pipeline" and retrieve the memory to see the assembled flag.
+11. Combine pieces from multiple services to construct the full flag.
+12. The monitoring service contains only fake logs and a decoy flag.
+13. Many responses are misleading; correlation is key.

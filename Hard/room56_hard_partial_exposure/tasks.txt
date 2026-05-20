@@ -1,0 +1,8 @@
+1. Map the target infrastructure (host discovery and port scanning). No services are given.
+2. Examine the web service. Find configuration files that expose partial credentials and infrastructure details.
+3. Obtain a valid JWT and analyze its weaknesses (weak secret, algorithm confusion).
+4. Escalate privileges by forging an admin JWT using the leaked secret.
+5. Discover hidden endpoints that require admin role and specific internal headers.
+6. From internal API responses, learn about a deserialization service. Obtain the required service token.
+7. Exploit insecure deserialization (Python pickle) to execute remote commands and retrieve the flag. (Alternatively, use leaked SSH credentials to pivot to the SSH server and escalate privileges via sudo.)
+8. Beware of deceptive files and fake flags placed in debug areas.

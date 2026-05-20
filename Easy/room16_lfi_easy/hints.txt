@@ -1,0 +1,5 @@
+[Hint 1] Try visiting /view?page=home and note it loads local files.
+[Hint 2] Use `..` to go up directories.
+
+Payroll example: /view?page=../secret/flag.txt
+[Hint 3] The flag is stored in `secret/flag.txt` relative to the web root.

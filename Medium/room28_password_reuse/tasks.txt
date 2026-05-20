@@ -1,0 +1,5 @@
+1. Investigate the web service at port 6070. Log in with common credentials (admin:admin123).
+2. Capture and decode the JWT token. Notice the weak signing secret (secret123).
+3. Modify the JWT role to "admin" to read the admin notes – discover a clue about another service.
+4. Connect to the internal TCP service at port 6071 and try the same credentials.
+5. Execute the `READ flag.txt` command on the TCP service to retrieve the flag.

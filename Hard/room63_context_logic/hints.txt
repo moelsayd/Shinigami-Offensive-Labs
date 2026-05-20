@@ -1,0 +1,3 @@
+[Hint 1] Try `?id=guest&id=admin` to exploit parameter pollution.
+[Hint 2] Set `User-Agent: InternalBot/1.0` when accessing /debug.
+[Hint 3] The YAML service at port 9802 accepts YAML documents. Use a payload with `!!python/object/apply:subprocess.check_output` to run commands.

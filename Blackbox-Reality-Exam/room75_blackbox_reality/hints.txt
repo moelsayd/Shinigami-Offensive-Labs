@@ -1,0 +1,6 @@
+[Hint 1] Use User-Agent: InternalBot to see hidden endpoints.
+[Hint 2] JWT secret is in /config. Forge with kid=/dev/null.
+[Hint 3] SSRF on /fetch bypasses localhost via decimal IP (2130706433).
+[Hint 4] User Service IDOR: /users/profile?id=3 gives a note.
+[Hint 5] Legacy Service bypass: X-Legacy-Auth: admin.
+[Hint 6] Worker token is "worker_admin_token". Upload "admin_pipeline" to trigger flag assembly.

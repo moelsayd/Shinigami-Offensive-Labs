@@ -1,0 +1,5 @@
+1. Enumerate directories on the target (port 6065) to discover the /register endpoint.
+2. Send a normal registration request via POST with a JSON body (e.g., {"user":"attacker"}).
+3. Observe the default "role" assigned (user).
+4. Exploit mass assignment by injecting an extra "role":"admin" field in your JSON.
+5. Retrieve the flag from the server's reply.

@@ -1,0 +1,10 @@
+1. Scan the entire host thoroughly. Discover all available services.
+2. Investigate the web server. Find hints about a virtual host (staging).
+3. Add staging.neocorp.local to /etc/hosts and access the staging portal.
+4. On the staging portal, read robots.txt and backup files to extract credentials and JWT secret.
+5. Authenticate to the staging portal, capture your JWT, and modify it to gain admin privileges.
+6. Use the obtained JWT to access the internal API at port 8802.
+7. Query the internal API: use NoSQL injection or IDOR to retrieve SSH credentials.
+8. Connect to the SSH service at port 8803 with the stolen credentials.
+9. Escalate privileges via the misconfigured sudo (find) to read the root flag.
+10. Beware of multiple fake flags placed throughout the environment.

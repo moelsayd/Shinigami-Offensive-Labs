@@ -1,0 +1,5 @@
+# Database Configuration (Old)
+DB_HOST=localhost
+DB_USER=admin
+DB_PASS=p@ssw0rd123
+# Internal flag moved to /hidden/flag.txt for security

@@ -1,0 +1,6 @@
+1. Recon the web service on port 6072. Find hidden credentials (view page source).
+2. Log in as admin/admin123 to the web portal and note the SSH credentials.
+3. Connect to the SSH simulator on port 6073 using the limited user.
+4. You are in a restricted shell. Enumerate available commands (try less /opt/flag.txt).
+5. Escape the restricted environment by invoking shell from within less (using !cat /opt/flag.txt).
+6. Retrieve the flag.

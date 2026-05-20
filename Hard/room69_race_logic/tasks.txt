@@ -1,0 +1,12 @@
+1. Map the target corporate network. Multiple services with rate limiting and monitoring are present.
+2. Log into the financial application. Observe the transfer and purchase functionalities.
+3. Analyze the transfer logic for flaws: both a race condition (timing) and a business logic error (negative amount) exist.
+4. Exploit the race condition to double-spend credits, increasing your balance rapidly.
+5. Alternatively, exploit the negative amount logic to directly boost your balance.
+6. Purchase the premium item to obtain a monitoring token.
+7. Use the monitoring token to access the internal monitoring service and retrieve a worker token.
+8. Use the worker token to access the transaction worker, which deserializes pickle payloads.
+9. Craft a pickle payload to execute `cat /root/flag.txt` and send it to the worker to retrieve the real flag.
+10. As an alternative path, locate SSH credentials and escalate privileges via sudo.
+11. Observe rate limiting headers and fake log entries that simulate real enterprise environments.
+12. Beware of fake flags in debug pages and monitoring logs.

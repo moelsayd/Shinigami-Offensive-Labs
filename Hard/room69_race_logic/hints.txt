@@ -1,0 +1,4 @@
+[Hint 1] The transfer endpoint processes balance changes with a delay. Send concurrent requests with tools like `seq 1 5 | xargs -P5 -n1 curl ...` to trigger the race.
+[Hint 2] A negative transfer amount increases your balance.
+[Hint 3] After buying the premium, use the monitoring token to query /token on port 10922.
+[Hint 4] The worker at 10933 accepts pickle objects with header X-Worker-Token: worker_token_789. Craft a pickle that executes `cat /root/flag.txt`.

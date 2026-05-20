@@ -1,0 +1,11 @@
+1. Perform a full port scan of the target host to identify running services.
+2. Examine the main web application. It appears sparse – don't trust it.
+3. Analyze the JavaScript bundle to extract configuration details.
+4. Access the internal API using the leaked header and key.
+5. Enumerate the API: find endpoints that leak backup files and environment configs.
+6. From the leaks, gather credentials, JWT secrets, and path hints.
+7. Exploit the user lookup endpoint to extract hidden fields (secret, ssh_creds) – you may need to chain with logic bugs.
+8. If stuck, note that the legacy flag endpoint requires a specific debug user header.
+9. Alternatively, extract SSH credentials and pivot to the SSH service.
+10. On SSH, escalate privileges via sudo to read the flag.
+11. Beware of fake flags: /debug, admin profile, and backup files contain decoys.

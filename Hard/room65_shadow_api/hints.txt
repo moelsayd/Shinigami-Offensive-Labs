@@ -1,0 +1,4 @@
+[Hint 1] The JavaScript file /assets/app.js leaks the JWT secret and the WebSocket URL.
+[Hint 2] Use jwt.io to change the role to "admin" with the key "shadow_api_secret".
+[Hint 3] The API at /api/updateConfig allows you to change the server's config object. Set "role":"admin" there.
+[Hint 4] Connect to the WebSocket with the admin token and type "flag".

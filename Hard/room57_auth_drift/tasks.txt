@@ -1,0 +1,8 @@
+1. Scan the host to find all services.
+2. On the main web app, discover the OAuth login flow. Extract client credentials from backup config.
+3. Exploit OAuth misconfiguration (open redirect) to obtain a valid authorization code.
+4. Examine the JWT returned after login – it assigns role "user". Forge an admin JWT using the leaked secret.
+5. With admin JWT, access the dashboard hint about an internal WebSocket service.
+6. Connect to the WebSocket service, authenticate with the admin token, and execute the "flag" command.
+7. Alternatively, use the WebSocket to achieve RCE and read /root/flag.txt.
+8. Ignore the fake flag in /debug and backup files.

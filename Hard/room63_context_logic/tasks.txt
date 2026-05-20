@@ -1,0 +1,8 @@
+1. Scan all ports on the target host to locate services.
+2. Access the web application. Log in with default credentials.
+3. Notice the user lookup feature. It blocks direct "admin" queries – but can you bypass it using HTTP Parameter Pollution?
+4. Change your User-Agent to "InternalBot/1.0" and revisit the debug page to uncover hidden information.
+5. Use the obtained API key to access the internal YAML processing service.
+6. Exploit the insecure YAML deserialization to achieve remote code execution and read the root flag.
+7. Alternatively, use SSH with discovered credentials for privilege escalation.
+8. Beware of multiple fake flags throughout the system.

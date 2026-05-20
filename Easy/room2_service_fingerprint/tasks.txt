@@ -1,0 +1,4 @@
+1. Scan the localhost to discover the open TCP port (9001).
+2. Connect to the service using netcat (nc) and observe the banner.
+3. Interact with the service and discover hidden commands (try HELP).
+4. Use the appropriate command to retrieve the flag.

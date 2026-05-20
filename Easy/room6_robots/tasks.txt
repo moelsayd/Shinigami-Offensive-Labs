@@ -1,0 +1,4 @@
+1. Identify the web service port.
+2. Check for common public files like /robots.txt.
+3. Read robots.txt to discover hidden paths.
+4. Access the restricted path and retrieve the flag.

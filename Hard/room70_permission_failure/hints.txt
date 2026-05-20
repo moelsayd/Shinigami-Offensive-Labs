@@ -1,0 +1,3 @@
+[Hint 1] The JWT token has a `kid` header. Try setting `kid=/dev/null` and signing with an empty key to become admin.
+[Hint 2] After upgrading, Service B still doesn't check your role. Use the IDOR: `/service-b?user_id=3`.
+[Hint 3] The monitoring service at 11044 shows fake logs – one of them reveals a fake flag.

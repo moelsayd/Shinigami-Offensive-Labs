@@ -1,0 +1,9 @@
+1. Scan localhost thoroughly for open ports. You'll find web (8101) and SSH (8103).
+2. Enumerate the web service: check robots.txt, debug page.
+3. Obtain a valid JWT by logging in as guest/guest.
+4. Discover the weak JWT secret from robots.txt or debug. Then forge an admin JWT (alg=none allowed).
+5. With admin access, visit /admin/metrics. Notice the id parameter behavior: it delays 2 seconds when a user exists.
+6. Exploit the time-based blind SQLi to infer data from the database, specifically the token_data for the admin user (it contains SSH credentials).
+7. Use the extracted credentials (developer:dev123) to log into the SSH service on port 8103.
+8. On the SSH server, run `sudo -l` to find allowed commands. Use `sudo find` to read /root/flag.txt.
+9. Submit the flag obtained from the SSH server.

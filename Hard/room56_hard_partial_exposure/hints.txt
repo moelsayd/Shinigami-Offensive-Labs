@@ -1,0 +1,5 @@
+[Hint 1] The config file `/config/app.conf` reveals the JWT secret and a clue about the internal service.
+[Hint 2] Forge a JWT with role=admin using the secret `s3cr3t_k3y!`. Then access `/api/v2/internal/users` with header `X-Internal-Role: admin`.
+[Hint 3] That endpoint returns SSH credentials. To access the deserialization service on port 9102, you need a service token which is in `/internal/service-key.txt` (admin only).
+[Hint 4] For deserialization, craft a pickle payload that executes `cat /root/flag.txt`. Use `X-Service-Token: deser123` when POSTing to port 9102.
+[Hint 5] Alternatively, use SSH with operator:0p3r4t0rP@ss and run `sudo find /root/flag.txt -exec cat {} \;`.

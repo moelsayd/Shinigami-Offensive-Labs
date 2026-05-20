@@ -1,0 +1,6 @@
+1. Map the web server: find open ports, add to /etc/hosts if needed.
+2. Enumerate the JavaScript files. Hidden configuration often leaks in window objects.
+3. Discover the admin panel path and the developer credentials left in comments.
+4. Access the admin panel, login, and explore the search function.
+5. Exploit the SQL injection in the search to retrieve the final flag.
+6. Beware of the fake secret page – it’s a decoy.

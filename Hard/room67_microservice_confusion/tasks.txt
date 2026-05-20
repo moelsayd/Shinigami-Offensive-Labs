@@ -1,0 +1,8 @@
+1. Scan the target to discover three services on non-standard ports.
+2. Inspect the main web application. Log in and note the JWT token structure.
+3. Locate configuration files that hint at an internal service with JWT kid injection.
+4. Craft a JWT with `kid=/dev/null` (empty secret) and `role=admin`. Sign it with an empty string.
+5. Use the proxy feature on the main dashboard (simulated HTTP request smuggling) to forward a raw HTTP request directly to the internal service, including your forged token.
+6. Access the internal admin endpoint through the smuggled request to retrieve the real flag.
+7. Alternatively, use the SSH service with discovered credentials for privilege escalation.
+8. Beware of fake flags in debug pages and other decoy locations.

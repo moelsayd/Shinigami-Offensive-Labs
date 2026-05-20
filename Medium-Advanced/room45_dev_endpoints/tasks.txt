@@ -1,0 +1,7 @@
+1. Scan localhost for an unusual service (port 7401).
+2. Examine robots.txt: it reveals three hidden directories.
+3. Visit /debug/env – notice the fake flag and credentials.
+4. Visit /internal/metrics – discover the access token and a hint about the devtools endpoint.
+5. Access /admin/devtools with the required header: X-Dev-Token: devtoken123
+6. Use the devtools user search (which is vulnerable to SQLi) to extract the real flag from the database.
+7. Do NOT submit the decoy flag from /debug/env.

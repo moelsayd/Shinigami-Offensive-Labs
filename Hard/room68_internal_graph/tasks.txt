@@ -1,0 +1,10 @@
+1. Scan the target to discover the listening services. Map the corporate network.
+2. Access the main web portal. Log in and explore the functionality.
+3. Find an open redirect that can be used to bypass the SSRF filter.
+4. Chain the open redirect with the URL fetcher to reach the internal metadata service.
+5. Extract a JWT token from the metadata service and analyze its structure.
+6. Identify the kid parameter in the JWT header and exploit a kid injection vulnerability to forge an admin token.
+7. Use the admin token to access the internal API and obtain a database token.
+8. Query the internal database with the token to retrieve the final flag.
+9. Observe rate limiting and fake logs that mimic a real corporate environment.
+10. Beware of fake flags placed in metadata, debug pages, and API responses.

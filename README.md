@@ -379,7 +379,7 @@ unzip
 
 1) Clone or extract the project
 
-git clone <repo-url> ~/ctf-labs
+git clone https://github.com/moelsayd/Shinigami-Offensive-Labs.git ~/ctf-labs
 
 or manually place the folder in:
 
